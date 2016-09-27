@@ -1,2 +1,6 @@
 <h1>ラーメンデータベースもどき</h1>
 <p>hoge</p>
+<%= form_tag("/search", method: "post") do %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("検索") %>
+<% end %>
