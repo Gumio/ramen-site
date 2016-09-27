@@ -1,3 +1,4 @@
 class Prefecture < ApplicationRecord
-  validates(:prefecture, presence: true)
+  has_many :shops
+  validates(:name, presence: true)
 end
