@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20160927013746) do
   create_table "reviews", force: :cascade do |t|
     t.integer  "star",       null: false
     t.text     "comment"
-    t.integer  "shop_id"
+    t.integer  "shop_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_reviews_on_shop_id"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160927013746) do
 
   create_table "shops", force: :cascade do |t|
     t.string   "name",          null: false
-    t.integer  "prefecture_id"
+    t.integer  "prefecture_id", null: false
     t.string   "address",       null: false
     t.string   "tel",           null: false
     t.text     "about"
