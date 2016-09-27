@@ -3,6 +3,7 @@
 
 <% @shops.each do |shop| %>
   <li>
-    <%= shop %>
+    <%= shop[:name] %><br>
+    <%= shop[:address] %>
   </li>
 <% end %>
