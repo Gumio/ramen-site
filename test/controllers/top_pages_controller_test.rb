@@ -7,22 +7,7 @@ class TopPagesControllerTest < ActionDispatch::IntegrationTest
     get root_path
     assert_response :success
   end
-
-  test "should get search" do
-    get search_path
-    assert_response :success
-  end
-
-  test "should get prefecture" do
-    get prefecture_path
-    assert_response :success
-  end
-
-  test "should get rank" do
-    get rank_path
-    assert_response :success
-  end
-
+  
   test "should get about" do
     get about_path
     assert_response :success
