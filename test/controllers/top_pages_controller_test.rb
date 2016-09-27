@@ -2,19 +2,18 @@ require 'test_helper'
 
 class TopPagesControllerTest < ActionDispatch::IntegrationTest
 
-  # 表示されるかのテスト
-  test "should get home" do
+  test "homeが表示されるかどうか" do
     get root_path
     assert_response :success
   end
-  
-  test "should get about" do
+
+  test "aboutが表示されるかどうか" do
     get about_path
     assert_response :success
   end
 
-  test "should get help" do
-    get root_path
+  test "helpが表示されるかどうか" do
+    get help_path
     assert_response :success
   end
 
