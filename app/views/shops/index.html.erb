@@ -8,7 +8,7 @@
     <li>
       <section>
         <h4><%= link_to shop.name, shop %></h4>
-        <address><%= shop.address %></address>
+        <address><%= "#{shop.prefecture.name}#{shop.address}" %></address>
       </section>
     </li>
   <% end %>
