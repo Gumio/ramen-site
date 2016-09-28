@@ -1,10 +1,10 @@
 <table>
   <% @japan_areas.each do |area, prefectures| %>
-  <tr>
+    <tr>
       <td><%= area %></td>
-        <% prefectures.each do |p| %>
-            <td> <%= link_to p.name, '#' %> <td>
-        <% end %>
-  </tr>
+      <% prefectures.each do |p| %>
+        <td> <%= link_to p.name, '#' %> <td>
+      <% end %>
+    </tr>
   <% end %>
 </table>
