@@ -6,7 +6,7 @@
     <tbody>
       <tr>
         <th>住所</th>
-        <td><%= "#{Prefecture.find_by(id: @shop.prefecture_id).name} #{@shop.address}" %></td>
+        <td><%= "#{@shop.prefecture.name}#{@shop.address}" %></td>
       </tr>
       <tr>
         <th>電話番号</th>
