@@ -1,5 +1,35 @@
-<section>
-  <h1>
-    <%= @shop.name %>
-  </h1>
-</section>
+<div>
+  <table>
+    <caption>
+      <strong><%= @shop.name %></strong>
+    </caption>
+    <tbody>
+      <tr>
+        <th>住所</th>
+        <td><%= "#{Prefecture.find_by(id: @shop.prefecture_id).name} #{@shop.address}" %></td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td><%= @shop.tel %></td>
+      </tr>
+      <tr>
+        <th>営業時間</th>
+        <td><%= "#{@shop.open_time} 〜 #{@shop.close_time}" %></td>
+      </tr>
+      <tr>
+        <th>定休日</th>
+        <td><%= @shop.holiday %></td>
+      </tr>
+      <tr>
+        <th>概要</th>
+        <td><%= @shop.about %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <%= image_tag @shop.image.url(:medium) %>
+</div>
+<div>
+  <%= @shop.evaluation %>
+</div>
