@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'prefectures_controller/show'
+  get 'prefectures/show'
 
   root 'top_pages#home'
   get 'about' => 'top_pages#about'
