@@ -58,7 +58,7 @@ RAMEN_PHOTO_DIR = File.expand_path("seeds/images/ramen_photos", __dir__)
 
 Shop.create!(id: 1,
              name: "中華蕎麦 とみ田",
-             prefecture_id: Prefecture.find_by(name: "千葉県"),
+             prefecture_id: Prefecture.find_by(name: "千葉県").id,
              address: "松戸市松戸1339 高橋ビル1F",
              tel: "047-368-8860",
              about: nil,
@@ -66,7 +66,7 @@ Shop.create!(id: 1,
              close_time: "15:00",
              holiday: "水曜日（祝日、祭日もお休みです）",
              evaluation: 5.0,
-             image: (File.open(File.join(RAMEN_PHOTO_DIR, "1.jpg"))))
+             image: (File.open(File.join(RAMEN_PHOTO_DIR, "1.jpg")) rescue nil))
 
 Shop.create!(id: 2,
              name: "麺屋 一燈",
@@ -100,7 +100,7 @@ Shop.create!(id: 3,
   open_time = "10:00"
   close_time = "20:00"
   evaluation = 3.3
-  image = "ramen.jpg"
+  image = ""
   Shop.create!(name: name,
                prefecture_id: prefecture,
                address: address,
