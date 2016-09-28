@@ -1,0 +1,13 @@
+<h1>検索結果</h1>
+<p>検索キーワード：<%= @search_keyword %></p>
+
+<ul class="shops">
+  <% @shops.each do |shop| %>
+    <li>
+      <section>
+        <h4><%= link_to shop.name, shop %></h4>
+        <address><%= shop.address %></address>
+      </section>
+    </li>
+  <% end %>
+</ul>

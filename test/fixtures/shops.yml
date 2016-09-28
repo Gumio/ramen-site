@@ -2,9 +2,9 @@
 
 one:
   name: MyString
-  prefectures_id: 1
+  prefecture_id: 1
   address: MyString
-  tell: MyString
+  tel: MyString
   about: MyText
   open_time: 2016-09-27 10:08:57
   close_time: 2016-09-27 10:08:57
@@ -14,9 +14,9 @@ one:
 
 two:
   name: MyString
-  prefectures_id: 1
+  prefecture_id: 1
   address: MyString
-  tell: MyString
+  tel: MyString
   about: MyText
   open_time: 2016-09-27 10:08:57
   close_time: 2016-09-27 10:08:57
