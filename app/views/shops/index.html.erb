@@ -1,6 +1,8 @@
 <h1>検索結果</h1>
 <p>検索キーワード：<%= @search_keyword %></p>
 
+<%= will_paginate %>
+
 <ul class="shops">
   <% @shops.each do |shop| %>
     <li>
@@ -11,3 +13,5 @@
     </li>
   <% end %>
 </ul>
+
+<%= will_paginate %>

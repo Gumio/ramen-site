@@ -2,7 +2,7 @@ class ShopsController < ApplicationController
 
   def index
     @search_keyword = index_params[:q]
-    @shops = Shop.keyword_search(@search_keyword)
+    @shops = Shop.keyword_search(@search_keyword).paginate(page: params[:page])
   end
 
   def show
