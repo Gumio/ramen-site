@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927013746) do
+ActiveRecord::Schema.define(version: 20160927114108) do
 
   create_table "prefectures", force: :cascade do |t|
     t.string   "name",       null: false
@@ -28,18 +28,22 @@ ActiveRecord::Schema.define(version: 20160927013746) do
   end
 
   create_table "shops", force: :cascade do |t|
-    t.string   "name",          null: false
-    t.integer  "prefecture_id", null: false
-    t.string   "address",       null: false
-    t.string   "tel",           null: false
+    t.string   "name",               null: false
+    t.integer  "prefecture_id",      null: false
+    t.string   "address",            null: false
+    t.string   "tel",                null: false
     t.text     "about"
-    t.time     "open_time",     null: false
-    t.time     "close_time",    null: false
+    t.time     "open_time",          null: false
+    t.time     "close_time",         null: false
     t.string   "holiday"
-    t.float    "evaluation",    null: false
+    t.float    "evaluation",         null: false
     t.string   "image"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["prefecture_id"], name: "index_shops_on_prefecture_id"
   end
 
