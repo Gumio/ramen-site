@@ -14,7 +14,7 @@
       </tr>
       <tr>
         <th>営業時間</th>
-        <td><%= "#{@shop.open_time} 〜 #{@shop.close_time}" %></td>
+        <td><%= "#{@shop.open_time.strftime("%k:%M")} 〜 #{@shop.close_time.strftime("%k:%M")}" %></td>
       </tr>
       <tr>
         <th>定休日</th>
@@ -31,5 +31,10 @@
   <%= image_tag @shop.image.url(:medium) %>
 </div>
 <div>
-  <%= @shop.evaluation %>
+  <table>
+    <tbody>
+      <tr>
+        <th>評価</th>
+        <td><%= @shop.evaluation %></td>
+  </table>
 </div>
