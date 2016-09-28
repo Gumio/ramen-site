@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'about' => 'top_pages#about'
   get 'help' => 'top_pages#help'
   post 'search'   => 'shops#index'
+  get  'search'   => 'shops#index'
   get 'rank'      => 'shops#ranking'
   get 'shop/:id'  => 'shops#show', :as => :shop
 
