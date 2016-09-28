@@ -15,7 +15,7 @@ class Prefecture < ApplicationRecord
 
   scope :hokkaido, -> { where(id: HOKKAIDO_IDS) }
   scope :tohoku,   -> { where(id: TOHOKU_IDS) }
-  scope :kantou,   -> { where(id: KANSAI_IDS) }
+  scope :kantou,   -> { where(id: KANTOU_IDS) }
   scope :hokuriku, -> { where(id: HOKURIKU_IDS) }
   scope :chubu,    -> { where(id: CHUBU_IDS) }
   scope :kansai,   -> { where(id: KANSAI_IDS) }
