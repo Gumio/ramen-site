@@ -8,5 +8,5 @@ class Shop < ApplicationRecord
   validates(:close_time, presence: true)
   validates(:evaluation, presence: true)
 
-  scope :keyword_search, -> (q) { where("name like '%#{q}%'")}
+  scope :keyword_search, -> (q) { where("name like ?", "%#{q}%")}
 end

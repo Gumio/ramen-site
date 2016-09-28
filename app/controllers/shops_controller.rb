@@ -2,7 +2,7 @@ class ShopsController < ApplicationController
 
   def index
     @search_keyword = index_params[:q]
-    @shops = Shop.keyword_search(index_params[:q])
+    @shops = Shop.keyword_search(@search_keyword)
   end
 
   def show
