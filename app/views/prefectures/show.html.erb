@@ -1,2 +1,12 @@
-<h1>Prefectures#show</h1>
-<p>Find me in app/views/prefectures/show.html.erb</p>
+<h1><%= @prefecture %></h1>
+
+<ul class="shops">
+  <% @shops.each do |shop| %>
+    <li>
+      <section>
+        <h4><%= link_to shop.name, shop %></h4>
+        <address><%= "#{shop.prefecture.name}#{shop.address}" %></address>
+      </section>
+    </li>
+  <% end %>
+</ul>
