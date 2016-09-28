@@ -1,9 +1,9 @@
 require 'test_helper'
 
 class ShopsControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get shops_index_url
+
+  test "should get search" do
+    get search_path
     assert_response :success
   end
-
 end
