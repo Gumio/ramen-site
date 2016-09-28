@@ -68,6 +68,30 @@ Shop.create!(id: 1,
              evaluation: 5.0,
              image: (File.open(File.join(RAMEN_PHOTO_DIR, "1.jpg"))))
 
+Shop.create!(id: 2,
+             name: "麺屋 一燈",
+             prefecture_id: Prefecture.find_by(name: "東京都"),
+             address: "葛飾区東新小岩1-4-17",
+             tel: "03-3697-9787",
+             about: "濃厚系",
+             open_time: "11:00",
+             close_time: "22:00",
+             holiday: "不定休",
+             evaluation: 4.9,
+             image: (File.open(File.join(RAMEN_PHOTO_DIR, "2.jpg"))))
+
+Shop.create!(id: 3,
+             name: "煮干中華ソバ イチカワ",
+             prefecture_id: Prefecture.find_by(name: "茨城県"),
+             address: "つくば市天久保2-9-2 リッチモンド二番街 A101",
+             tel: "不明",
+             about: "煮干しソバ 750円",
+             open_time: "11:30",
+             close_time: "14:00",
+             holiday: "日曜日・水曜日（その他不定休あり）",
+             evaluation: 4.8,
+             image: (File.open(File.join(RAMEN_PHOTO_DIR, "3.jpg"))))
+
 30.times do |n|
   name = "ラーメン店#{n + 1}号"
   prefecture = n + 1
