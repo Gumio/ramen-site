@@ -56,8 +56,7 @@ Prefecture.create!(name: "沖縄県")
 
 RAMEN_PHOTO_DIR = File.expand_path("seeds/images/ramen_photos", __dir__)
 
-Shop.create!(id: 1,
-             name: "中華蕎麦 とみ田",
+Shop.create!(name: "中華蕎麦 とみ田",
              prefecture_id: Prefecture.find_by(name: "千葉県").id,
              address: "松戸市松戸1339 高橋ビル1F",
              tel: "047-368-8860",
@@ -68,8 +67,7 @@ Shop.create!(id: 1,
              evaluation: 5.0,
              image: (File.open(File.join(RAMEN_PHOTO_DIR, "1.jpg")) rescue nil))
 
-Shop.create!(id: 2,
-             name: "麺屋 一燈",
+Shop.create!(name: "麺屋 一燈",
              prefecture_id: Prefecture.find_by(name: "東京都").id,
              address: "葛飾区東新小岩1-4-17",
              tel: "03-3697-9787",
@@ -80,8 +78,7 @@ Shop.create!(id: 2,
              evaluation: 4.9,
              image: (File.open(File.join(RAMEN_PHOTO_DIR, "2.jpg"))))
 
-Shop.create!(id: 3,
-             name: "煮干中華ソバ イチカワ",
+Shop.create!(name: "煮干中華ソバ イチカワ",
              prefecture_id: Prefecture.find_by(name: "茨城県").id,
              address: "つくば市天久保2-9-2 リッチモンド二番街 A101",
              tel: "不明",
