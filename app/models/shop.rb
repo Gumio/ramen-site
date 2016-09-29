@@ -9,6 +9,7 @@ class Shop < ApplicationRecord
   validates(:evaluation, presence: true)
 
   scope :keyword_search, -> (q) {
+    q = '' if q.nil?
     where("name LIKE :q ESCAPE '\\'", { q: "%#{sanitize_sql_like(q)}%"})
   }
   has_attached_file :image, styles: { medium: "240x240" }

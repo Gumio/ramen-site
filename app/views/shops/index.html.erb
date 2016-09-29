@@ -1,5 +1,15 @@
-<h1>検索結果</h1>
-<p>検索キーワード：<%= @search_keyword %></p>
+<h1>
+  <% if params[:q].nil? %>
+    検索ページ
+  <% else %>
+    検索結果
+  <% end %>
+</h1>
+<p>
+  <% if !params[:q].blank? %>
+    検索キーワード：<%= @search_keyword %>
+  <% end %>
+</p>
 
 <%= will_paginate %>
 
