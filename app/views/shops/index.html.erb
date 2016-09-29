@@ -7,7 +7,7 @@
 <% end %>
 
 <p>
-  <% if !params[:q].blank? %>
+  <% if params[:q].present? %>
     検索キーワード：<%= @search_keyword %>
   <% end %>
 </p>

@@ -11,4 +11,9 @@ class ShopsControllerTest < ActionDispatch::IntegrationTest
     get search_path, params: {q: ""}
     assert_response :success
   end
+
+  test "should get search with nil" do
+    get search_path, params: {q: nil}
+    assert_response :success
+  end
 end
