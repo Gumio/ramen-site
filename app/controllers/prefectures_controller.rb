@@ -4,8 +4,7 @@ class PrefecturesController < ApplicationController
   end
 
   def show
-    @shops = Shop.where(prefecture_id: params[:id]).paginate(page: params[:page])
-    @prefecture = Prefecture.find(params[:id]).name
+    @prefecture_name = Prefecture.find(params[:id])
+    @shops = @prefecture_name.shops.paginate(page: params[:page])
   end
-
 end
