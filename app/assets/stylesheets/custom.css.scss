@@ -92,3 +92,13 @@ footer {
     }
   }
 }
+
+/* table */
+
+.table-condenced td {
+  padding: 0.5px;
+  margin: 0.5px;
+  font-size: 13px;
+  text-align: center;
+  border-top: none !important;
+}
