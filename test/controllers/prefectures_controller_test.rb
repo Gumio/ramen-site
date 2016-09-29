@@ -1,16 +1,20 @@
 require 'test_helper'
 
 class PrefecturesControllerTest < ActionDispatch::IntegrationTest
-  test "should get show" do
+  test "地域別検索ページが表示されるかどうか" do
     get prefectures_path
     assert_response :success
   end
 
-  test "各都道府県の検索が表示されるかどうか" do
-    for i in 1..47 do
-      get prefectures_path"/#{i}"
-      assert_response :success
-    end
+  test "都道府県毎の検索ページが表示されるかどうか" do
+    get prefecture_path(prefectures(:one))
+    assert_response :success
+    get prefecture_path(prefectures(:two))
+    assert_response :success
   end
 
+  test "404が返ってくるかどうか" do
+    assert_raises(ActiveRecord::RecordNotFound) { get prefecture_path(id: 0) }
+    assert_raises(ActiveRecord::RecordNotFound) { get prefecture_path(id: 48) }
+  end
 end
