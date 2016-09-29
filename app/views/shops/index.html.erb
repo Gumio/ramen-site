@@ -1,6 +1,6 @@
 <% if params[:q].blank? %>
   <% provide(:title, '検索ページ') %>
-  <h1>検索ページ</h1>
+  <h1>検索で探す</h1>
 <% else %>
   <% provide(:title, params[:q] + 'の検索結果') %>
   <h1>検索結果</h1>
@@ -8,6 +8,7 @@
 
 <div class="row">
   <div class="col-md-4">
+    <h2>検索で探す</h2>
     <%= render 'shared/search_form' %>
   </div>
   <div class="col-md-8">
