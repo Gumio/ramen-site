@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'rooms/show'
+
   root 'top_pages#home'
   get 'about' => 'top_pages#about'
   get 'help' => 'top_pages#help'
