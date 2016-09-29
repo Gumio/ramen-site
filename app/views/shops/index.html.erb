@@ -6,25 +6,29 @@
   <h1>検索結果</h1>
 <% end %>
 
-<p>
-  <% if params[:q].present? %>
-    検索キーワード：<%= @search_keyword %>
-  <% end %>
-</p>
+<div class="row">
+  <div class="col-md-4">
+    <%= render 'shared/search_form' %>
+  </div>
+  <div class="col-md-8">
+    <p>
+      <% if params[:q].present? %>
+        検索キーワード：<%= @search_keyword %>
+      <% end %>
+    </p>
+    <%= will_paginate %>
 
-<%= render 'shared/search_form' %>
+    <ul class="shops list-group">
+      <% @shops.each do |shop| %>
+        <li class="list-group-item">
+          <section>
+            <h4><%= link_to shop.name, shop %></h4>
+            <address><%= "#{shop.prefecture.name}#{shop.address}" %></address>
+          </section>
+        </li>
+      <% end %>
+    </ul>
 
-<%= will_paginate %>
-
-<ul class="shops">
-  <% @shops.each do |shop| %>
-    <li>
-      <section>
-        <h4><%= link_to shop.name, shop %></h4>
-        <address><%= "#{shop.prefecture.name}#{shop.address}" %></address>
-      </section>
-    </li>
-  <% end %>
-</ul>
-
-<%= will_paginate %>
+    <%= will_paginate %>
+  </div>
+</div>
