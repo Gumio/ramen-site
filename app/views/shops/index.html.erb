@@ -1,5 +1,18 @@
-<h1>検索結果</h1>
-<p>検索キーワード：<%= @search_keyword %></p>
+<% if params[:q].blank? %>
+  <% provide(:title, '検索ページ') %>
+  <h1>検索ページ</h1>
+<% else %>
+  <% provide(:title, params[:q] + 'の検索結果') %>
+  <h1>検索結果</h1>
+<% end %>
+
+<p>
+  <% if params[:q].present? %>
+    検索キーワード：<%= @search_keyword %>
+  <% end %>
+</p>
+
+<%= render 'shared/search_form' %>
 
 <%= will_paginate %>
 
