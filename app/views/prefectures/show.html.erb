@@ -1,15 +1,20 @@
-<% provide(:title, "#{@prefecture}一覧") %>
-<h1><%= @prefecture %></h1>
-
-<%= will_paginate(@shops) %>
-<ul class="shops">
-  <% @shops.each do |shop| %>
-    <li>
-      <section>
-        <h4><%= link_to shop.name, shop %></h4>
-        <address><%= "#{shop.prefecture.name}#{shop.address}" %></address>
-      </section>
-    </li>
-  <% end %>
-</ul>
-<%= will_paginate(@shops) %>
+<% provide(:title, "#{@prefecture_name.name}一覧") %>
+<div class="row">
+  <div class="col-md-4">
+    <h1><%= @prefecture_name.name %>のラーメン店</h1>
+  </div>
+  <div class="col-md-8">
+    <%= will_paginate(@shops) %>
+    <ul class="shops list-group">
+      <% @shops.each do |shop| %>
+        <li class="list-group-item">
+          <section>
+            <h4><%= link_to shop.name, shop %></h4>
+            <address><%= "#{shop.prefecture.name}#{shop.address}" %></address>
+          </section>
+        </li>
+      <% end %>
+    </ul>
+    <%= will_paginate(@shops) %>
+  </div>
+</div>
