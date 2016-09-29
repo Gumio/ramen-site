@@ -3,7 +3,7 @@
     <tr>
       <td><%= area %></td>
       <% prefectures.each do |p| %>
-        <td> <%= link_to p.name, '#' %> <td>
+        <td> <%= link_to p.name, prefecture_path(p) %> <td>
       <% end %>
     </tr>
   <% end %>

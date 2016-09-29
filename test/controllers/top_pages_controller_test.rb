@@ -17,4 +17,9 @@ class TopPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "地域別が表示されるかどうか" do
+    get prefectures_path
+    assert_response :success
+  end
+
 end

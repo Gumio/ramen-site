@@ -1,0 +1,15 @@
+<% provide(:title, "#{@prefecture}一覧") %>
+<h1><%= @prefecture %></h1>
+
+<%= will_paginate(@shops) %>
+<ul class="shops">
+  <% @shops.each do |shop| %>
+    <li>
+      <section>
+        <h4><%= link_to shop.name, shop %></h4>
+        <address><%= "#{shop.prefecture.name}#{shop.address}" %></address>
+      </section>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate(@shops) %>
