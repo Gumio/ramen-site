@@ -27,23 +27,17 @@
           <th>概要</th>
           <td><%= @shop.about %></td>
         </tr>
+        <tr>
+          <th>評価</th>
+          <td><%= @shop.evaluation %></td>
+        </tr>
       </tbody>
     </table>
+    <div>
+      <%= image_tag @shop.image.url(:medium) %>
+    </div>
   </div>
   <div class="col-md-4">
     <br><br>ここにMapを貼ります
   </div>
-</div>
-<div>
-  <%= image_tag @shop.image.url(:medium) %>
-</div>
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <th>評価</th>
-        <td><%= @shop.evaluation %></td>
-      </tr>
-    </tbody>
-  </table>
 </div>
