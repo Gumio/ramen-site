@@ -49,7 +49,7 @@
   handler = Gmaps.build('Google');
   handler.buildMap({
     provider: {
-      zoom: 16,
+      zoom: 15,
       center:    new google.maps.LatLng(<%= @shop.latitude %>, <%= @shop.longitude %>),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     },
