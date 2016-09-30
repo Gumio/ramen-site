@@ -37,6 +37,11 @@ gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
+# Use google map
+gem "gmaps4rails"
+gem "geocoder"
+gem "underscore-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
