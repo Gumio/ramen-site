@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'prefectures/:id' => 'prefectures#show', :as => :prefecture
   get 'rank'      => 'shops#ranking'
   get 'shops/:id'  => 'shops#show', :as => :shop
+  get 'chat'      => 'rooms#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
