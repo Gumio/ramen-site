@@ -7,6 +7,8 @@ class Shop < ApplicationRecord
   validates(:open_time, presence: true)
   validates(:close_time, presence: true)
   validates(:evaluation, presence: true)
+  geocoded_by :address
+  after_validation :geocode
 
   scope :keyword_search, -> (q) {
     where("name LIKE :q ESCAPE '\\' OR about LIKE :q ESCAPE '\\'", { q: "%#{sanitize_sql_like(q.to_s)}%"})
