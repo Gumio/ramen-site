@@ -1,4 +1,14 @@
-<h1>ラーメンデータベースもどき</h1>
-<p>ラーメンさがすよ〜〜〜</p>
-<%= render 'shared/search_form' %>
-<%= render 'shared/area_list' %>
+<div class='jumbotron'>
+  <h1>ラーメンさがすよ〜〜〜</h1>
+</div>
+
+<div class='row'>
+  <div class='col-md-4'>
+    <h2>検索で探す</h2>
+    <%= render 'shared/search_form' %>
+  </div>
+  <div class='col-md-8'>
+    <h2>都道府県から探す</h2>
+    <%= render 'shared/area_list' %>
+  </div>
+</div>

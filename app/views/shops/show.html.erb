@@ -1,44 +1,43 @@
 <% provide(:title, @shop.name.to_s) %>
 
-<div>
-  <table>
-    <caption>
-      <h1><%= @shop.name %></h1>
-    </caption>
-    <tbody>
-      <tr>
-        <th>住所</th>
-        <td><%= "#{@shop.prefecture.name}#{@shop.address}" %></td>
-      </tr>
-      <tr>
-        <th>電話番号</th>
-        <td><%= @shop.tel %></td>
-      </tr>
-      <tr>
-        <th>営業時間</th>
-        <td><%= "#{@shop.open_time.strftime("%k:%M")} 〜 #{@shop.close_time.strftime("%k:%M")}" %></td>
-      </tr>
-      <tr>
-        <th>定休日</th>
-        <td><%= @shop.holiday %></td>
-      </tr>
-      <tr>
-        <th>概要</th>
-        <td><%= @shop.about %></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div>
-  <%= image_tag @shop.image.url(:medium) %>
-</div>
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <th>評価</th>
-        <td><%= @shop.evaluation %></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <caption>
+        <h1><%= @shop.name %></h1>
+      </caption>
+      <tbody>
+        <tr>
+          <th>住所</th>
+          <td><%= "#{@shop.prefecture.name}#{@shop.address}" %></td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td><%= @shop.tel %></td>
+        </tr>
+        <tr>
+          <th>営業時間</th>
+          <td><%= "#{@shop.open_time.strftime("%k:%M")} 〜 #{@shop.close_time.strftime("%k:%M")}" %></td>
+        </tr>
+        <tr>
+          <th>定休日</th>
+          <td><%= @shop.holiday %></td>
+        </tr>
+        <tr>
+          <th>概要</th>
+          <td><%= @shop.about %></td>
+        </tr>
+        <tr>
+          <th>評価</th>
+          <td><%= @shop.evaluation %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <%= image_tag @shop.image.url(:medium) %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <br><br>ここにMapを貼ります
+  </div>
 </div>
